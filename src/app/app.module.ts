@@ -11,8 +11,9 @@ import {FormsModule} from "@angular/forms";
 
 const rutas: Routes = [
   {path: '', redirectTo: '/estudiantes', pathMatch: 'full'},
-  {path:"estudiantes", component: EstudiantesComponent},
-  {}
+  {path:'estudiantes', component: EstudiantesComponent},
+  {path:'estudiantes/form', component: EstudianteForm},
+  {path:'estudiantes/form/:id', component: EstudianteForm}
 ];
 
 

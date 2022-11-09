@@ -19,4 +19,12 @@ export class EstudiantesComponent implements OnInit {
       );
   }
 
+  delete(estudiante: Estudiante): void {
+    //TODO: Sweet Alert: Que pregunte si en realidad quieres eliminar el estudiante
+    this.estudianteService.delete(estudiante.id).subscribe(
+      response => this.estudiantes = this.estudiantes.filter(est => est !== estudiante)
+      //TODO: Sweet Alert: Estudiante eliminado mensaje: Estudiante ${estudiante.nombre} eliminado
+    )
+
+  }
 }

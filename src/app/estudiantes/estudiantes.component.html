@@ -25,10 +25,13 @@
          <button type="button" [routerLink]="['/estudiantes/form', estudiante.id]" name="Editar" class="btn btn-primary btn-sm">Editar</button>
       </td>
       <td>
-        <button type="button"  name="Eliminar" class="btn btn-danger btn-sm">Eliminar</button>
+        <button type="button"  name="Eliminar" (click)="delete(estudiante)" class="btn btn-danger btn-sm">Eliminar</button>
       </td>
 
     </tr>
+
+      <button type="button" [routerLink]="['/estudiantes/form']" name="Crear" class="btn btn-primary btn-sm">Crear</button>
+
     </tbody>
   </table>
 </div>
